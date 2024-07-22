@@ -1,4 +1,4 @@
-from destinations import MetricsDestination
+from .destinations import MetricsDestination
 from typing import Any
 
 

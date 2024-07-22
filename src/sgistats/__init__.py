@@ -1,9 +1,16 @@
 import io
 import time
 from typing import Callable, Dict
-from destinations import MetricsDestination
-from collectors import MetricsCollector
+from .destinations import MetricsDestination, ConsoleMetricsDestination
+from .collectors import MetricsCollector
 
+
+__all__ = [
+    "MetricsDestination",
+    "ConsoleMetricsDestination",
+    "MetricsCollector",
+    "ASGIMetricsMiddleware"
+]
 
 class WSGIMetricsMiddleware:
     def __init__(self, app: Callable, metrics_collector: MetricsCollector):

@@ -31,8 +31,11 @@ dev = [
     "black",
 ]
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
 include = ["sgistats*"]
 exclude = ["tests*"]
 
